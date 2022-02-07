@@ -7,11 +7,11 @@ module.exports = {
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
-  plugins: [],
+  plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
   },
 }

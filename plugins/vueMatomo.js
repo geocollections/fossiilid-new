@@ -6,8 +6,7 @@ export default ({ app }) => {
   Vue.use(VueMatomo, {
     router: app.router,
     host: 'https://matomo.geoloogia.info/',
-    // siteId: 3, Todo: Create new site in matomo app
-
+    siteId: 5,
     /** Other configuration options **/
   })
 }
