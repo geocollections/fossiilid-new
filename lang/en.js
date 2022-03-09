@@ -6,4 +6,25 @@ export default {
     readMoreButton: 'Read our terms of use',
     acceptAndClose: 'Accept and close the notification',
   },
+  navLinks: {
+    home: 'Home',
+    search: 'Search',
+    about: 'About',
+    privacy: 'Privacy',
+  },
+  footer: {
+    related: 'Related web resources:',
+    licence:
+      'Except where otherwise noted, content on this site is licensed under CC BY-NC Licence.',
+    founders: 'Founding institutions',
+    gi: 'Department of Geology, TalTech',
+    ut: 'Natural History Museum, University of Tartu',
+    elm: 'ERstonian Natural History Museum',
+  },
+  pages: {
+    index: {
+      title: 'Lorem Ipsum',
+      subtitle: 'Lorem Ipsum text is placeholder',
+    },
+  },
 }
