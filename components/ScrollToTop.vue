@@ -3,7 +3,7 @@
   <transition name="fade">
     <div
       v-show="showButton"
-      class="rounded-full bottom-4 right-4 px-3 pb-1 fixed text-4xl bg-green-500 text-white shadow-md hover:bg-green-700 cursor-pointer transition-colors"
+      class="rounded-full bottom-12 sm:bottom-4 right-4 px-3 pb-1 fixed text-4xl bg-green text-white shadow-md cursor-pointer transform hover:-translate-y-2 transition duration-200"
       @click="toTop"
     >
       ˄

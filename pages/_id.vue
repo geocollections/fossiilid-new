@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h1>Taxon: {{ $route.params.id }}</h1>
+    <PageHeaderTaxon
+      :name="taxon.taxon"
+      :rank="taxon.rank.rank_en"
+      :reference="taxon.reference.reference"
+    />
+    <!-- <h1>Taxon: {{ $route.params.id }}</h1> -->
 
     <div>Ids: {{ ids }}</div>
 
@@ -9,7 +14,9 @@
 </template>
 
 <script>
+import PageHeaderTaxon from '../components/layout/PageHeaderTaxon.vue'
 export default {
+  components: { PageHeaderTaxon },
   async asyncData({ params, route, error, $services }) {
     try {
       const detailViewResponse = await $services.sarvREST.getResource(
@@ -24,7 +31,6 @@ export default {
 
       const ids = detailViewResponse?.ids
       const taxon = detailViewResponse
-
       return {
         ids,
         taxon,
