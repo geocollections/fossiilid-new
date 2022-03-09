@@ -55,7 +55,18 @@ export default {
       //   content: 'https://dev.geoloogia.info/logos/emaapou_short.png?t=12345?',
       // },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.gstatic.com',
+        crossorigin:
+          'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -78,6 +89,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -121,12 +133,12 @@ export default {
     ],
     lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'et',
+    defaultLocale: 'en',
     strategy: 'prefix_and_default',
     detectBrowserLanguage: {
       useCookie: true,
       onlyOnRoot: true,
-      fallbackLocale: 'et',
+      fallbackLocale: 'en',
     },
   },
 
