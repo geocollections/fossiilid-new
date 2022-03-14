@@ -25,6 +25,18 @@ export default {
     index: {
       title: 'Lorem Ipsum',
       subtitle: 'Lorem Ipsum text is placeholder',
+      search: 'Search',
+      filters: {
+        name: 'Name',
+        locality: 'Locality',
+        stratigraphy: 'Stratigraphy',
+      },
+    },
+  },
+  components: {
+    contentBox: {
+      readMore: 'Read more',
+      readLess: 'Read less',
     },
   },
 }

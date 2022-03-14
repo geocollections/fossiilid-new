@@ -25,6 +25,18 @@ export default {
     index: {
       title: 'Lorem Ipsum',
       subtitle: 'Lorem Ipsum text is placeholder',
+      search: 'Otsi',
+      filters: {
+        name: 'Nimi',
+        locality: 'Asukoht',
+        stratigraphy: 'Stratigraafia',
+      },
+    },
+  },
+  components: {
+    contentBox: {
+      readMore: 'Vaata rohkem',
+      readLess: 'Peida',
     },
   },
 }

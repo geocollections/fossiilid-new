@@ -6,7 +6,7 @@
     adipiscing elit, sed do eiusmod tempor luciado 250 000 incididunt"
     />
     <main class="container mx-auto">
-      <div class="max-w-xl mx-auto -mt-8 z-40 relative px-4 md:px-0">
+      <div class="max-w-xl mx-auto -mt-8 z-40 relative px-4 md:px-0 space-y-4">
         <div
           class="h-16 flex flex-row gap-1 pl-4 pr-2 py-2 bg-white shadow-md justify-between"
         >
@@ -25,8 +25,25 @@
           <button
             class="h-full text-xs sm:text-base sm:w-1/4 text-center text-white bg-green px-3"
           >
-            Search
+            {{ $t('pages.index.search') }}
           </button>
+        </div>
+        <div class="w-full h-12 flex justify-center items-center gap-4">
+          <Button
+            :active="searchFilter.includes('Name')"
+            @clicked="toggleFilter('Name')"
+            >{{ $t('pages.index.filters.name') }}</Button
+          >
+          <Button
+            :active="searchFilter.includes('Locality')"
+            @clicked="toggleFilter('Locality')"
+            >{{ $t('pages.index.filters.locality') }}</Button
+          >
+          <Button
+            :active="searchFilter.includes('Stratigraphy')"
+            @clicked="toggleFilter('Stratigraphy')"
+            >{{ $t('pages.index.filters.stratigraphy') }}</Button
+          >
         </div>
       </div>
 
@@ -52,13 +69,24 @@
 import Vue from 'vue'
 import TaxonCard from '../components/layout/TaxonCard.vue'
 import PageHeader from '../components/layout/PageHeader.vue'
+import Button from '../components/layout/Button.vue'
 export default Vue.extend({
   name: 'IndexPage',
-  components: { TaxonCard, PageHeader },
+  components: { TaxonCard, PageHeader, Button },
+  data() {
+    return {
+      searchFilter: ['Name'],
+    }
+  },
   methods: {
     focusSearch() {
       const ref: any = this?.$refs?.box
       return ref?.focus()
+    },
+    toggleFilter(filter: string) {
+      this.searchFilter.includes(filter)
+        ? (this.searchFilter = this.searchFilter.filter((n) => n !== filter))
+        : this.searchFilter.push(filter)
     },
   },
 })
