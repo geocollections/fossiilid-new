@@ -1,22 +1,19 @@
 <template>
   <div
-    class="relative pattern-bg bg-orange w-full h-96 md:h-128 z-0 pt-4 flex flex-col justify-between"
+    class="relative pattern-bg bg-orange w-full md:h-128 z-0 pt-4 pb-12 md:pb-0 flex flex-col md:justify-between"
   >
-    <div>
-      <NavBar />
-    </div>
+    <NavBar />
     <header
-      class="w-full flex flex-col justify-center items-start md:items-center mx-auto space-y-4 md:space-y-8 md:text-center px-4 md:max-w-2xl max-w-sm mt-6 md:mt-12"
+      class="w-full flex flex-col justify-center items-start md:items-center mx-auto space-y-4 md:space-y-8 md:text-center px-4 md:max-w-4xl max-w-sm mt-6 md:mt-12"
     >
-      <div class="w-full flex justify-between">
+      <div class="w-full flex justify-between max-w-lg text-sm md:text-base">
         <p>{{ rank }}</p>
         <p>{{ reference }}</p>
       </div>
-      <h1 id="page-title" class="font-bold text-3xl md:text-5xl">
+      <h1 id="page-title" class="font-bold text-2xl sm:text-3xl md:text-5xl">
         {{ name }}
       </h1>
-      <!-- <img src="~assets/svg/squiggly-line.svg" class="w-10 md:w-12" /> -->
-      <p v-if="localName" class="md:text-2xl">
+      <p v-if="localName" class="text-sm md:text-2xl">
         {{ localName }}
       </p>
     </header>
@@ -28,9 +25,10 @@
       />
     </div>
     <img
+      id="right"
       src="~assets/png/leaf1.png"
       alt="fossil leaf"
-      class="absolute h-40 md:h-80 transform z-20 bottom-0 right-0 -mt-12 md:translate-y-1/3 translate-x-3/4"
+      class="absolute h-40 md:h-80 transform z-20 bottom-0 right-0 md:-mt-12 translate-y-1/2 md:translate-y-1/3 translate-x-3/4"
     />
     <img
       src="~assets/png/snail.png"
@@ -38,7 +36,7 @@
       class="absolute h-40 md:h-96 transform z-20 bottom-0 left-0 translate-y-1/2 md:-translate-y-12 -translate-x-2/3 -ml-8"
     />
     <div
-      class="md:max-w-2xl flex mx-auto w-full fixed bottom-0 left-0 md:relative"
+      class="flex mx-auto w-full fixed bottom-0 left-0 md:relative md:max-w-2xl"
     >
       <TabButton
         text="Overview"

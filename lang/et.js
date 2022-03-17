@@ -32,6 +32,9 @@ export default {
         stratigraphy: 'Stratigraafia',
       },
     },
+    id: {
+      classification: 'Klassifikatsioon',
+    },
   },
   components: {
     contentBox: {

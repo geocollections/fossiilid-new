@@ -1,10 +1,9 @@
 <template>
-  <aside class="bg-beige">
-    <header class="flex justify-start items-center">
+  <div class="bg-beige w-full" @click="toggle()">
+    <header class="flex sm:justify-start items-center">
       <button
         class="bg-green text-white p-2 transform"
-        :class="{ 'rotate-180': !open }"
-        @click="toggle()"
+        :class="{ 'rotate-180': !isOpen }"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,17 +21,24 @@
         </svg>
       </button>
 
-      <h3 class="font-bold px-12">Classification</h3>
+      <h3 class="font-bold flex-grow text-center px-8 lg:px-10 xl:px-16">
+        {{ title }}
+      </h3>
     </header>
     <div v-show="isOpen">
       <slot></slot>
     </div>
-  </aside>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      required: true,
+      default: 'Dropdown',
+    },
     open: {
       type: Boolean,
       required: false,

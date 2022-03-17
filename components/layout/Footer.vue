@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-6 px-4 mt-6 text-center w-screen bg-orange">
+  <footer class="pt-6 px-4 mt-6 text-center w-screen bg-orange pb-24 md:pb-6">
     <div
       class="container flex justify-between mx-auto text-xs md:flex-row flex-wrap md:flex-nowrap"
     >
@@ -22,8 +22,10 @@
           <a href="/">Geocollections</a>
         </nav>
       </div>
-      <div class="flex flex-col-reverse gap-6 md:flex-row md:justify-around">
-        <div class="md:w-1/2 flex flex-col justify-center">
+      <div
+        class="flex flex-col-reverse gap-6 md:flex-row md:justify-around flex-grow"
+      >
+        <div class="md:w-1/2 flex flex-col justify-center max-w-sm mx-auto">
           <p>{{ $t('footer.licence') }}</p>
           <img
             src="~assets/png/ccbync.png"
@@ -31,23 +33,24 @@
             class="mx-auto my-3"
           />
           <div
-            class="flex flex-col md:flex-row flex-wrap justify-center items-center lg:justify-between lg:h-12 mx-auto gap-2 mt-3"
+            class="flex flex-row justify-center items-center mx-auto gap-2 mt-3"
           >
-            <img
-              src="~assets/svg/natarc_logo_black.svg"
-              alt="natarc logo"
-              class="w-1/2 md:w-28 lg:w-1/4"
-            />
-            <img
-              src="~assets/svg/sarv_logo.svg"
-              alt="sarv logo"
-              class="w-1/2 md:w-28 lg:w-1/4"
-            />
-
+            <div class="">
+              <img
+                src="~assets/svg/natarc_logo_black.svg"
+                alt="natarc logo"
+                class="md:w-28"
+              />
+              <img
+                src="~assets/svg/sarv_logo.svg"
+                alt="sarv logo"
+                class="md:w-28"
+              />
+            </div>
             <img
               src="~assets/png/EL_mv.png"
               alt="EL logo"
-              class="w-2/3 lg:w-1/4 md:pl-6 mt-3"
+              class="w-1/2 md:pl-6 mt-3"
             />
           </div>
         </div>

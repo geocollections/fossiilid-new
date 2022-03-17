@@ -32,6 +32,9 @@ export default {
         stratigraphy: 'Stratigraphy',
       },
     },
+    id: {
+      classification: 'Classification',
+    },
   },
   components: {
     contentBox: {

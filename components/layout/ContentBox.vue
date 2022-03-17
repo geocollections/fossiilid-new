@@ -1,7 +1,7 @@
 <template>
-  <div class="text-xs lg:text-base ml-2 pr-4">
+  <div class="text-xs lg:text-base ml-2 pr-4 max-w-prose">
     <div class="" :class="{ 'h-48 overflow-y-hidden': !isOpen }">
-      <h2 class="font-bold pb-4 text-base">{{ title }}</h2>
+      <h2 class="font-bold pb-4 text-sm md:text-base">{{ title }}</h2>
 
       <slot> </slot>
     </div>

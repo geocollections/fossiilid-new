@@ -16,9 +16,9 @@
     <!-- <div>data: {{ taxon }}</div> -->
 
     <main
-      class="mx-auto pt-6 relative flex justify-center items-start max-w-prose"
+      class="mx-auto pt-6 relative flex justify-center items-start md:-ml-60 lg:-ml-36"
     >
-      <div class="space-y-6 ml-2 pr-4">
+      <div class="space-y-6 md:ml-2 pr-4">
         <ContentBox title="About">
           <p class="text-xs lg:text-base">
             Fossil, or fossil, is a remnant of an ancient life form, from simple
@@ -34,7 +34,7 @@
           </p>
         </ContentBox>
         <ContentBox title="List of species">
-          <ul class="text-xs md:text-sm">
+          <ul class="text-xs lg:text-sm">
             <li v-for="(item, index) in species" :key="index">
               <p>
                 {{ index + 1 }}.
@@ -45,8 +45,10 @@
           </ul>
         </ContentBox>
       </div>
-      <div class="-mr-60">
-        <Dropdown :open="true">
+      <div
+        class="fixed bottom-0 left-0 right-0 pb-1 mb-10 md:relative md:-mr-52 lg:-mr-60 z-20"
+      >
+        <Dropdown :open="true" :title="$t('pages.id.classification')">
           <ul class="py-4 px-3 text-xs space-y-3">
             <li
               v-for="item in classification.parents"
